@@ -72,11 +72,6 @@ var onChosenFileToOpen = function(theFileEntry) {
   readFileIntoEditor(theFileEntry);
 };
 
-var onWritableFileToOpen = function(theFileEntry) {
-  setFile(theFileEntry, true);
-  readFileIntoEditor(theFileEntry);
-};
-
 var onChosenFileToSave = function(theFileEntry) {
   setFile(theFileEntry, true);
   writeEditorToFile(theFileEntry);
