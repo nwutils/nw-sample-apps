@@ -4,7 +4,7 @@ A non-trivial sample with basic features of a code editor, like syntax detection
 
 ## Screen shot
 
-![screenshot](http://ww3.sinaimg.cn/large/6556d357tw1dxtz5nih7oj.jpg "Screenshot of mini code editor")
+![screenshot](http://ww3.sinaimg.cn/large/6556d357tw1dxtz5nih7oj.jpg)
 
 ## APIs
 
@@ -12,4 +12,4 @@ A non-trivial sample with basic features of a code editor, like syntax detection
 * [Menu](https://github.com/rogerwang/node-webkit/wiki/Menu)
 * [MenuItem](https://github.com/rogerwang/node-webkit/wiki/MenuItem)
 * [Clipboard](https://github.com/rogerwang/node-webkit/wiki/Clipboard)
-* [node.js fs module](http://nodejs.org/api/fs.html)
+* [fs module](http://nodejs.org/api/fs.html)

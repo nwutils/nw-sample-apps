@@ -1,0 +1,14 @@
+{
+  "name": "Frameless Window",
+  "description": "Chrome platform app.",
+  "version": "0.1",
+  "main": "frameless_window.html",
+  "window": {
+    "show": false,
+    "frame": false,
+    "width": 360,
+    "height": 300,
+    "min_width": 220,
+    "min_height": 220
+  }
+}
