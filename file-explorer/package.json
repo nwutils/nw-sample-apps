@@ -1,0 +1,11 @@
+{
+  "name": "FileExplorer",
+  "description": "Simple file explorer.",
+  "version": "0.1",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "width": 660,
+    "height": 500
+  }
+}
