@@ -5,7 +5,9 @@
   "main": "frameless_window.html",
   "window": {
     "show": false,
+    "toolbar": false,
     "frame": false,
+    "position": "center",
     "width": 360,
     "height": 300,
     "min_width": 220,
