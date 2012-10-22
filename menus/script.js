@@ -16,10 +16,10 @@ menu1.append(new gui.MenuItem({ type: 'separator' }));
 menu1.append(new gui.MenuItem({ icon: 'imgs/disk.png', label: 'Disk', submenu: submenu }));
 
 var menu2 = new gui.Menu();
-menu2.append(new gui.MenuItem({ type: 'checkbox', icon: 'imgs/apple.png', label: 'Apple' }));
-menu2.append(new gui.MenuItem({ type: 'checkbox', icon: 'imgs/banaba.png', label: 'Banana' }));
-menu2.append(new gui.MenuItem({ type: 'checkbox', icon: 'imgs/strawberry.png', label: 'Strawberry' }));
-menu2.append(new gui.MenuItem({ type: 'checkbox', icon: 'imgs/pear.png', label: 'Pear' }));
+menu2.append(new gui.MenuItem({ type: 'checkbox', label: 'Apple' }));
+menu2.append(new gui.MenuItem({ type: 'checkbox', label: 'Banana' }));
+menu2.append(new gui.MenuItem({ type: 'checkbox', label: 'Strawberry' }));
+menu2.append(new gui.MenuItem({ type: 'checkbox', label: 'Pear' }));
 menu2.append(new gui.MenuItem({ type: 'separator' }));
 var info_item = new gui.MenuItem({ label: 'Which Fruit Do I Love?' });
 menu2.append(info_item);
@@ -29,11 +29,9 @@ function flip() {
     lastone.checked = false;
     lastone.enabled = true;
   }
-
   lastone = this;
   this.enabled = false;
   info_item.label = 'I Love ' + this.label;
-  info_item.icon = this.icon;
 }
 for (var i = 0; i < 4; ++i)
   menu2.items[i].click = flip;
