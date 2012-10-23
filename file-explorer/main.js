@@ -3,7 +3,7 @@ global.$ = $;
 var abar = require('address_bar');
 var folder_view = require('folder_view');
 var path = require('path');
-var shell = require('shell');
+var shell = require('nw.gui').Shell;
 
 $(document).ready(function() {
   var folder = new folder_view.Folder($('#files'));
@@ -16,7 +16,7 @@ $(document).ready(function() {
     if (mime.type == 'folder') {
       addressbar.enter(mime);
     } else {
-      shell.execute(mime.path);
+      shell.openItem(mime.path);
     }
   });
 
