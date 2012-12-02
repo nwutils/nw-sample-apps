@@ -101,7 +101,7 @@ function handleSaveButton() {
 }
 
 function initContextMenu() {
-  menu = new gui.Menu({ title: 'Editor Menu' });
+  menu = new gui.Menu();
   menu.append(new gui.MenuItem({
     label: 'Copy',
     click: function() {
