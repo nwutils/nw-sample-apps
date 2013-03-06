@@ -1,0 +1,10 @@
+{
+  "name": "mp3-encoder",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "resizable": false,
+    "width": 660,
+    "height": 500
+  }
+}
