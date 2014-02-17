@@ -1,7 +1,10 @@
 {
-  "name": "Hello 3D World",
-  "version": "1",
+  "name": "Hello-3D-World",
+  "version": "0.0.1",
   "main": "index.html",
+  "scripts": {
+    "start": "nodewebkit"
+  },
   "window": {
     "frame": false,
     "width": 500,
