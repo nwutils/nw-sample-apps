@@ -1,0 +1,11 @@
+{
+  "name": "nw-demo",
+  "main": "app.html",
+  "window": {
+    "show": false,
+    "frame": false,
+    "position": "center",
+    "width": 500,
+    "height": 500
+  }
+}
