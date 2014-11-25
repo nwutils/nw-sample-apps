@@ -77,6 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function onDocumentMouseDown(event) {
+        // Allows window close via [x]
+        document.elementFromPoint(event.clientX, event.clientY).click();
+        
       document.body.requestPointerLock =
         document.body.requestPointerLock ||
         document.body.mozRequestPointerLock ||
