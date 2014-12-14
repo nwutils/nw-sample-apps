@@ -14,7 +14,7 @@ body {
 .file {
   padding: 2px;
   margin: 2px;
-  width: 80px;
+  width: 100px;
   display: inline-block;
 
   text-align: center;
@@ -27,7 +27,6 @@ body {
 }
 
 .file .name {
-  width: 80px;
   word-wrap: break-word;
 }
 
@@ -38,9 +37,13 @@ body {
 .file .icon {
   margin: auto;
   margin-top: 0;
-  width: 60px;
 }
 
 .file.focus .icon {
   -webkit-filter: invert(20%);
+}
+
+li.active a {
+    color: darkgreen;
+    text-shadow: 1px 1px 1px #AAA;
 }
