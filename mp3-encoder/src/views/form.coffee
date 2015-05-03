@@ -7,7 +7,7 @@ class EncodeFormView extends Backbone.View
 
   render: ->
     @$el.html """
-      File: <input class="file" type="file"><br>
+      File: <input class="file" type="file" accept=".wav,.wave"><br>
       Bitrate: <input class="bitrate" type="text" value="128"><br>
       <input type="submit" value="Encode!">
     """
@@ -20,8 +20,8 @@ class EncodeFormView extends Backbone.View
     data =
       source:  @$("input.file").val()
       bitrate: parseInt @$("input.bitrate").val()
-      log: (data) =>
-        @logsElem.html "#{@logsElem.html()}<br>#{data}"
+      log: (data, type = 'info') =>
+        @logsElem.html "#{@logsElem.html()}<br><span class='#{type}'>#{data}</span>"
 
     return console.log "no file!" unless data.source?
 
