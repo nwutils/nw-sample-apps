@@ -3,7 +3,7 @@
   "main": "app.html",
   "window": {
     "show": false,
-    "frame": false,
+    "frame": true,
     "position": "center",
     "width": 500,
     "height": 500
