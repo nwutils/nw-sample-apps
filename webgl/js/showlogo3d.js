@@ -26,18 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
     document.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
 
+    var closeEl = initCloseBtn();
+
     init();
     animate();
 
     function init() {
-
-      var closeEl=document.querySelector(".close");
-      if (closeEl) {
-        closeEl.addEventListener('click', function() {
-          window.close();
-        });
-      };
-
       container = document.createElement( 'div' );
       document.body.appendChild( container );
 
@@ -69,6 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
+    function initCloseBtn() {
+      var closeEl = document.querySelector(".close");
+      if (closeEl) {
+        closeEl.addEventListener('click', function() {
+          window.close();
+        });
+      };
+      return closeEl;
+    }
+
     function createScene( geometry ) {
       zmesh = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial() );
       zmesh.position.set( -10, -10, 0 );
@@ -77,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function onDocumentMouseDown(event) {
+      if (event.target == closeEl) return; // it should deliver click to close button
+
       document.body.requestPointerLock =
         document.body.requestPointerLock ||
         document.body.mozRequestPointerLock ||
