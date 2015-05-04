@@ -10,6 +10,6 @@ A sample application to showcase how you can use `"frame": false` windows to all
 
 ## APIs
 
-* [Window](https://github.com/rogerwang/node-webkit/wiki/Window)
-* [Frameless Window](https://github.com/rogerwang/node-webkit/wiki/Frameless-Window)
+* [Window](https://github.com/nwjs/nw.js/wiki/Window)
+* [Frameless Window](https://github.com/nwjs/nw.js/wiki/Frameless-Window)
 

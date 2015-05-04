@@ -10,8 +10,8 @@ A non-trivial sample with basic features of a code editor, like syntax detection
 
 ## APIs
 
-* [Window](https://github.com/rogerwang/node-webkit/wiki/Window)
-* [Menu](https://github.com/rogerwang/node-webkit/wiki/Menu)
-* [MenuItem](https://github.com/rogerwang/node-webkit/wiki/MenuItem)
-* [Clipboard](https://github.com/rogerwang/node-webkit/wiki/Clipboard)
+* [Window](https://github.com/nwjs/nw.js/wiki/Window)
+* [Menu](https://github.com/nwjs/nw.js/wiki/Menu)
+* [MenuItem](https://github.com/nwjs/nw.js/wiki/MenuItem)
+* [Clipboard](https://github.com/nwjs/nw.js/wiki/Clipboard)
 * [fs module](http://nodejs.org/api/fs.html)

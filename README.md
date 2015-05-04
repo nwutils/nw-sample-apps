@@ -1,11 +1,11 @@
-# Sample apps for node-webkit
+# Sample apps for NW.js
 
-Here are some sample apps for [node-webkit](https://github.com/rogerwang/node-webkit),
+Here are some sample apps for [nw.js](https://github.com/nwjs/nw.js),
 some of them are modified from [GoogleChrome/chrome-app-samples](https://github.com/GoogleChrome/chrome-app-samples).
 
-Please visit [node-webkit group](http://groups.google.com/group/node-webkit) for discussions.
+Please visit [nw.js group](http://groups.google.com/group/nwjs-general) for discussions.
 
 
 ## How to run apps
 
-https://github.com/rogerwang/node-webkit/wiki/How-to-run-apps
+https://github.com/nwjs/nw.js/wiki/How-to-run-apps

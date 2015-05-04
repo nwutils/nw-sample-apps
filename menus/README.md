@@ -7,5 +7,5 @@ API, there aree three menus bound to three areas in the page.
 
 ## APIs
 
-* [Menu](https://github.com/rogerwang/node-webkit/wiki/Menu)
-* [MenuItem](https://github.com/rogerwang/node-webkit/wiki/MenuItem)
+* [Menu](https://github.com/nwjs/nw.js/wiki/Menu)
+* [MenuItem](https://github.com/nwjs/nw.js/wiki/MenuItem)
