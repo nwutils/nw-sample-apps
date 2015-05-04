@@ -4,8 +4,11 @@
 
 
 class Encoder
-  constructor: ({@source,@bitrate,@target,@log}) ->
+  constructor: ({@source, @bitrate, @target, @log}) ->
     @target  ||= @source.replace /\.wav$/, ".mp3"
+    if @target == @source
+      @target = @target.replace(/\.([^.]+)$/, ' encoded.$1')
+
     @bitrate ||= 128
 
     switch platform()
@@ -15,18 +18,19 @@ class Encoder
         @pathToBin = "vendor/bin/win32/shineenc.exe"
 
     # binary may not be executable due to zip compression..
-    chmodSync @pathToBin, 0755
+    chmodSync @pathToBin, 0o755
 
   process: ->
     @log "Starting encoding process.."
 
-    @child = spawn @pathToBin, ["-b",@bitrate,@source,@target]
+    @child = spawn @pathToBin, ["-b", @bitrate, @source, @target]
 
     @child.stdout.on "data", (data) =>
-      @log "#{data}"
+      @log "#{data.toString().replace(/\n/g, '<br>')}"
 
     @child.stderr.on "data", (data) =>
-      @log "ERROR: #{data}"
+      @log "ERROR: #{data.toString().replace(/\n/g, '<br>')}", 'error'
 
     @child.on "exit", (code) =>
-      @log "Encoding process exited with code: #{code}"
+      style = if code == 0 then 'good' else 'error'
+      @log "Encoding process exited with code: #{code}", style
