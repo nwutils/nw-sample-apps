@@ -2,7 +2,6 @@ global.$ = $;
 
 var abar = require('address_bar');
 var folder_view = require('folder_view');
-var path = require('path');
 var nwGui = require('nw.gui');
 
 // append default actions to menu for OSX
