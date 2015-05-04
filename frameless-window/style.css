@@ -104,7 +104,7 @@ div#inner-content {
   width: 80%;
   margin-top: 6px;
   margin-bottom: 6px;
-  font-style: Arial;
+  font-family: Arial;
   font-size: 11pt;
   color: #ffffff;
 }
@@ -115,7 +115,7 @@ div#inner-content {
   width: 100px;
   margin-left: 6px;
   margin-right: 6px;
-  font-style: Arial;
+  font-family: Arial;
   font-size: 12pt;
   color: #ffffff;
   -webkit-transform: rotate(-90deg) translate(0, 100%);
@@ -128,7 +128,7 @@ div#inner-content {
   width: 100px;
   margin-left: 6px;
   margin-right: 6px;
-  font-style: Arial;
+  font-family: Arial;
   font-size: 12pt;
   color: #ffffff;
   -webkit-transform: rotate(90deg) translate(0, 100%);
