@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // for nw-notify frameless windows
   NW.Window.get().on('close', function() {
-    process.exit(0);
+    NW.App.quit();
   });
 });
 
