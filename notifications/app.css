@@ -1,0 +1,34 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: Helvetica Neue, Lucida Grande, Segoe UI, Tahoma, sans;
+  font-size: 16px;
+  background: #EDEDED;
+}
+
+section {
+  padding: 1em 1em 0;
+}
+
+section .buttons-group {
+  margin-bottom: 1em;
+}
+
+section .buttons-group h5 {
+  margin-top: 0;
+  margin-bottom: 0.65em;
+}
+
+#output {
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  background: #fff;
+  border: 1px solid #BEBEBE;
+  height: 248px;
+  max-height: 248px;
+  overflow: auto;
+}

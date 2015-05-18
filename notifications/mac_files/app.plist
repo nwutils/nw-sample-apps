@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleDisplayName</key>
+  <string>NW.js Example</string>
+  <key>CFBundleDocumentTypes</key>
+  <array/>
+  <key>CFBundleExecutable</key>
+  <string>nwjs</string>
+  <key>CFBundleIconFile</key>
+  <string>app.icns</string>
+  <key>CFBundleIdentifier</key>
+  <string>org.nwjs.sample.notifications</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>NW.js Example</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>0.1</string>
+  <key>CFBundleVersion</key>
+  <string>First version</string>
+  <key>LSFileQuarantineEnabled</key>
+  <true/>
+  <key>LSMinimumSystemVersion</key>
+  <string>10.6.0</string>
+  <key>NSPrincipalClass</key>
+  <string>NSApplication</string>
+  <key>NSSupportsAutomaticGraphicsSwitching</key>
+  <true/>
+  <key>SCMRevision</key>
+  <string>175484</string>
+  <key>UTExportedTypeDeclarations</key>
+  <array/>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+{
+  "name": "nw-notification-demo",
+  "main": "app.html",
+  "window": {
+    "show": true,
+    "frame": true,
+    "toolbar": false,
+    "icon": "app.icns",
+    "width": 550,
+    "height": 470
+  },
+  "scripts": {
+    "start": "nw ."
+  },
+  "dependencies": {
+    "node-notifier": "^4.2.1",
+    "nw-notify": "0.2.0"
+  }
+}
