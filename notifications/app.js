@@ -1,5 +1,6 @@
 var NW = require('nw.gui');
 
+// Extend application menu for Mac OS
 if (process.platform == "darwin") {
   var menu = new NW.Menu({type: "menubar"});
   menu.createMacBuiltin && menu.createMacBuiltin(window.document.title);
@@ -44,13 +45,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   $('#nw-notify-camera').addEventListener('click', function (event) {
-    showHtmlNotification("./icons/camera.png", "Camera", 'example notification', 'Glass');
+    showHtmlNotification("./icons/camera.png", "Camera", 'example notification', function (event) {
+      setTimeout(function () {
+        console.log("closing notification on timeout", event)
+        event.closeNotification();
+      }, 1200);
+    });
   });
 
   $('#nw-notify-car').addEventListener('click', function (event) {
     showHtmlNotification('./icons/car.png', "Taxi is arrived", 'hurry up');
   });
 
+  // bring window to front when open via terminal
   NW.Window.get().focus();
 
   // for nw-notify frameless windows
@@ -65,6 +72,7 @@ var writeLog = function (msg) {
   logElement.scrollTop = logElement.scrollHeight
 }
 
+// NW.JS Notification
 var showNotification = function (icon, title, body) {
   if (icon && icon.match(/^\./)) {
     icon = icon.replace('.', 'file://' + process.cwd());
@@ -88,6 +96,7 @@ var showNotification = function (icon, title, body) {
   return notification;
 }
 
+// NODE-NOTIFIER
 var showNativeNotification = function (icon, title, message, sound, image) {
   var notifier;
   try {
@@ -124,7 +133,8 @@ var showNativeNotification = function (icon, title, message, sound, image) {
   writeLog("-----<br>node-notifier: " + title);
 };
 
-var showHtmlNotification = function (icon, title, body) {
+// NW-NOTIFY
+var showHtmlNotification = function (icon, title, body, callback) {
   var notifier;
   try {
     notifier = require('nw-notify');
@@ -151,12 +161,23 @@ var showHtmlNotification = function (icon, title, body) {
     }
   });
 
-  var callback = function () {
-    writeLog("nw-notify notification clicked");
-  };
-
   if (icon) icon = notifier.getAppPath() + icon;
-  notifier.notify(title, body, false, icon, callback);
 
-  writeLog("-----<br>nw-notify: " + title);
+  notifier.notify({
+    title: title,
+    text: body,
+    iconPath: icon,
+    onShowFunc: function (event) {
+      if (callback) callback(event);
+      writeLog("-----<br>nw-notify: " + title);
+    },
+    onClickFunc: function (event) {
+      writeLog("nw-notify notification clicked");
+    },
+    onCloseFunc: function (event) {
+      if (event.event == 'close') {
+        writeLog("nw-notify notification closed ");
+      }
+    }
+  });
 };

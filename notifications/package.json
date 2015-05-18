@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "node-notifier": "^4.2.1",
-    "nw-notify": "0.1.1"
+    "nw-notify": "0.2.0"
   }
 }
