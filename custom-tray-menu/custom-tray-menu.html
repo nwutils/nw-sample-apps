@@ -1,0 +1,89 @@
+<html>
+  <script>
+    var gui = require('nw.gui');
+    var win = gui.Window.get();
+  </script>
+  <style>
+    body, html {
+      margin: 0;
+      font-size: 12px;
+      font-family: Helvetica Neue, Lucida Grande, Segoe UI, Tahoma, sans;
+      overflow: hidden !important;
+      color: #333;
+    }
+    section {
+      background: #fff;
+      margin: 10px 13px 13px 13px;
+      padding: 9px;
+      border-radius: 7px;
+      border: 1px solid #A9A9A9;
+      /*overflow: hidden;*/
+      box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+    section::after, section::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+    }
+    section::before {
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #A9A9A9;
+      top: -10px;
+      left: calc(50% - 11px);
+    }
+    section::after {
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-bottom: 9px solid #fff;
+      top: -9px;
+      left: calc(50% - 10px);
+    }
+    h4 {
+      color: #555555;
+      height: 33px;
+      line-height: 33px;
+      margin: -9px -9px 10px -9px;
+      background: linear-gradient(180deg, #fff, #E9E9E9);
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      text-align: center;
+      font-size: 12px;
+      border-bottom: 1px solid #adadad;
+    }
+    /* FOR WINDOWS */
+    body.win32 section::before, body.win64 section::before {
+      border-bottom: none;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #A9A9A9;
+      top: auto;
+      bottom: -10px;
+      left: calc(50% - 11px);
+    }
+    body.win32 section::after, body.win64  section::after {
+      border-bottom: none;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+      border-top: 9px solid #fff;
+      top: auto;
+      bottom: -9px;
+      left: calc(50% - 10px);
+    }
+    body.win32, body.win64 {{
+      section {
+        border-color: red;
+      }
+    }}
+  </style>
+  <body>
+    <section>
+      <h4>A custom tray menu</h4>
+      <p><button onclick="win.hide();">Close Menu</button></p>
+      <p><button onclick="gui.App.closeAllWindows();">Close App</button></p>
+    </section>
+  </body>
+</html>
