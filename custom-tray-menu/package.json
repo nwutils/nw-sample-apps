@@ -1,0 +1,17 @@
+{
+  "name": "nw-custom-tray-window",
+  "main": "index.html",
+  "window": {
+    "show": true,
+    "frame": true,
+    "toolbar": true,
+    "icon": "app.icns",
+    "width": 550,
+    "height": 348
+  },
+  "scripts": {
+    "start": "nw ."
+  },
+  "dependencies": {
+  }
+}

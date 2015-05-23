@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
 var writeLog = function (msg) {
   var logElement = $("#output");
   logElement.innerHTML += msg + "<br>";
-  logElement.scrollTop = logElement.scrollHeight
-}
+  logElement.scrollTop = logElement.scrollHeight;
+};
 
 // NW.JS Notification
 var showNotification = function (icon, title, body) {
