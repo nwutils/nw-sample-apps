@@ -1,3 +1,12 @@
+var gui = require("nw.gui");
+
+// Extend application menu for Mac OS
+if (process.platform == "darwin") {
+  var menu = new gui.Menu({type: "menubar"});
+  menu.createMacBuiltin && menu.createMacBuiltin(window.document.title);
+  gui.Window.get().menu = menu;
+}
+
 function updateCheckbox() {
   var top_checkbox = document.getElementById("top-box");
   var bottom_checkbox = document.getElementById("bottom-box");
@@ -36,27 +45,47 @@ function initCheckbox(checkboxId, titlebar_name, titlebar_icon_url, titlebar_tex
 window.onfocus = function() { 
   console.log("focus");
   focusTitlebars(true);
-}
+};
 
 window.onblur = function() { 
   console.log("blur");
   focusTitlebars(false);
-}
+};
 
 window.onresize = function() {
   updateContentStyle();
-}
+};
 
 window.onload = function() {
+
   initCheckbox("top-box", "top-titlebar", "top-titlebar.png", "Top Titlebar");
   initCheckbox("bottom-box", "bottom-titlebar", "bottom-titlebar.png", "Bottom Titlebar");
   initCheckbox("left-box", "left-titlebar", "left-titlebar.png", "Left Titlebar");
   initCheckbox("right-box", "right-titlebar", "right-titlebar.png", "Right Titlebar");
-  
+
   document.getElementById("close-window-button").onclick = function() {
     window.close();
-  }
-  
+  };
+
+  document.querySelector('#minimize-window-button').onclick = function () {
+    gui.Window.get().minimize();
+  };
+
+  document.querySelector('#maximize-window-button').onclick = function () {
+    gui.Window.get().maximize();
+  };
+
+  document.querySelector('#open-inspector-button').onclick = function () {
+    var win = gui.Window.get();
+    if (win.isDevToolsOpen()) {
+      win.closeDevTools();
+      this.innerText = "Open Developer Tools";
+    } else {
+      win.showDevTools();
+      this.innerText = "Close Developer Tools";
+    }
+  };
+
   updateContentStyle();
-  require("nw.gui").Window.get().show();
-}
+  gui.Window.get().show();
+};
