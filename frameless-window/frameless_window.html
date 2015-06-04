@@ -1,44 +1,38 @@
 <html>
-
 <head>
+  <title>Frameless Window</title>
 
-<title>Frameless Window</title>
-
-<link rel="stylesheet" type="text/css" href="style.css" />
-<script src="titlebar.js"></script>
-<script src="frameless_window.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="titlebar.js"></script>
+  <script src="frameless_window.js"></script>
 </head>
 
 <body>
+  <div id="content">
+    <div id="inner-content">
 
-<div id="content">
+      Select the titlebar to enable:
+      <br/>
 
-<div id="inner-content">
+      <input type="checkbox" id="top-box">Top Titlebar
+      <br/>
+      <input type="checkbox" id="bottom-box">Bottom Titlebar
+      <br/>
+      <input type="checkbox" id="left-box">Left Titlebar
+      <br/>
+      <input type="checkbox" id="right-box">Right Titlebar
+      <br/>
+      <br/>
 
-Select the titlebar to enable:<br/>
-<input type="checkbox" id="top-box">Top Titlebar
-<br/>
-<input type="checkbox" id="bottom-box">Bottom Titlebar
-<br/>
-<input type="checkbox" id="left-box">Left Titlebar
-<br/>
-<input type="checkbox" id="right-box">Right Titlebar
-<br/>
-<br/>
-<button id="close-window-button">Close Window</button>
-<br/>
-<button id="minimize-window-button">Minimize</button>
-<br/>
-<button id="maximize-window-button">Maximize</button>
+      <button id="close-window-button">Close Window</button>
+      <br/>
+      <button id="minimize-window-button">Minimize</button>
+      <br/>
+      <button id="maximize-window-button">Maximize</button>
+      <br/>
+      <button id="open-inspector-button">Open Developer Tools</button>
 
-<br/>
-<button id="open-inspector-button">Open Developer Tools</button>
-
-</div>
-
-</div>
-
+    </div>
+  </div>
 </body>
-
 </html>
