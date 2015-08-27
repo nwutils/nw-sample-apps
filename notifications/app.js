@@ -148,17 +148,7 @@ var showHtmlNotification = function (icon, title, body, callback) {
 
   // give it nice look
   notifier.setConfig({
-    defaultStyleContainer: {
-      border: '1px solid #9D9D9D',
-      borderRadius: '6px',
-      backgroundColor: 'rgba(245, 245, 245, 0.94)',
-      fontFamily: 'Helvetica Neue',
-      boxShadow: '0px 0px 11px rgba(0, 0, 0, 0.4)',
-      fontSize: 12,
-      position: 'relative',
-      lineHeight: '17px',
-      padding: '8px 12px 8px 14px'
-    }
+    displayTime: 6000
   });
 
   if (icon) icon = notifier.getAppPath() + icon;
@@ -166,7 +156,7 @@ var showHtmlNotification = function (icon, title, body, callback) {
   notifier.notify({
     title: title,
     text: body,
-    iconPath: icon,
+    image: icon,
     onShowFunc: function (event) {
       if (callback) callback(event);
       writeLog("-----<br>nw-notify: " + title);
