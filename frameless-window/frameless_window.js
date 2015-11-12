@@ -74,6 +74,9 @@ window.onload = function() {
   document.querySelector('#maximize-window-button').onclick = function () {
     gui.Window.get().maximize();
   };
+  document.querySelector('#unmaximize-window-button').onclick = function () {
+    gui.Window.get().unmaximize();
+  };
 
   document.querySelector('#open-inspector-button').onclick = function () {
     var win = gui.Window.get();
