@@ -1,7 +1,8 @@
 # Sample apps for NW.js
 
-Here are some sample apps for [nw.js](https://github.com/nwjs/nw.js),
-some of them are modified from [GoogleChrome/chrome-app-samples](https://github.com/GoogleChrome/chrome-app-samples).
+Here are some sample apps for [**nw.js**](https://github.com/nwjs/nw.js). <br/>
+Some of them are modified from [**GoogleChrome/chrome-app-samples**](https://github.com/GoogleChrome/chrome-app-samples). <br/>
+Some other example apps can be found at [Sapioit-com/**nwjs-example-apps**](https://github.com/Sapioit-com/nwjs-example-apps)
 
 Please visit [nw.js group](http://groups.google.com/group/nwjs-general) for discussions.
 
