@@ -2,34 +2,26 @@ global.$ = $;
 
 var abar = require('address_bar');
 var folder_view = require('folder_view');
-var nwGui = require('nw.gui');
+var gui = require('nw.gui');
 
-// append default actions to menu for OSX
-var initMenu = function () {
-  try {
-    var nwGui = require('nw.gui');
-    var nativeMenuBar = new nwGui.Menu({type: "menubar"});
-    if (process.platform == "darwin") {
-      nativeMenuBar.createMacBuiltin && nativeMenuBar.createMacBuiltin("FileExplorer");
-    }
-    nwGui.Window.get().menu = nativeMenuBar;
-  } catch (error) {
-    console.error(error);
-    setTimeout(function () { throw error }, 1);
-  }
-};
+// Extend application menu for Mac OS
+if (process.platform == "darwin") {
+  var menu = new gui.Menu({type: "menubar"});
+  menu.createMacBuiltin && menu.createMacBuiltin(window.document.title);
+  gui.Window.get().menu = menu;
+}
 
 var App = {
   // show "about" window
   about: function () {
     var params = {toolbar: false, resizable: false, show: true, height: 120, width: 350};
-    var aboutWindow = nwGui.Window.open('about.html', params);
+    var aboutWindow = gui.Window.open('about.html', params);
     aboutWindow.on('document-end', function() {
       aboutWindow.focus();
       // open link in default browser
       $(aboutWindow.window.document).find('a').bind('click', function (e) {
         e.preventDefault();
-        nwGui.Shell.openExternal(this.href);
+        gui.Shell.openExternal(this.href);
       });
     });
   },
@@ -58,8 +50,6 @@ var App = {
 };
 
 $(document).ready(function() {
-  initMenu();
-
   var folder = new folder_view.Folder($('#files'));
   var addressbar = new abar.AddressBar($('#addressbar'));
 
@@ -73,7 +63,7 @@ $(document).ready(function() {
     if (mime.type == 'folder') {
       addressbar.enter(mime);
     } else {
-      nwGui.Shell.openItem(mime.path);
+      gui.Shell.openItem(mime.path);
     }
   });
 
@@ -86,4 +76,6 @@ $(document).ready(function() {
     event.preventDefault();
     App.cd(this);
   });
+
+  gui.Window.get().show();
 });

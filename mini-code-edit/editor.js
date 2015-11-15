@@ -8,6 +8,13 @@ var gui = require("nw.gui");
 var fs = require("fs");
 var clipboard = gui.Clipboard.get();
 
+// Extend application menu for Mac OS
+if (process.platform == "darwin") {
+  var menu = new gui.Menu({type: "menubar"});
+  menu.createMacBuiltin && menu.createMacBuiltin(window.document.title);
+  gui.Window.get().menu = menu;
+}
+
 function handleDocumentChange(title) {
   var mode = "javascript";
   var modeName = "JavaScript";

@@ -1,6 +1,6 @@
 {
-  "name": "Hello 3D World",
-  "version": "1",
+  "name": "Hello-3D-World",
+  "version": "1.0.0",
   "main": "index.html",
   "window": {
     "frame": false,
@@ -9,5 +9,8 @@
     "toolbar": false,
     "position": "center",
     "resizable": false
+  },
+  "scripts": {
+    "start": "nw ."
   }
 }

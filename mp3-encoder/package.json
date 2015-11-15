@@ -6,5 +6,8 @@
     "resizable": false,
     "width": 660,
     "height": 500
+  },
+  "scripts": {
+    "start": "nw ."
   }
 }

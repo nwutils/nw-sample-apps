@@ -1,10 +1,13 @@
 {
-  "name": "node-webkit menu demo",
+  "name": "NWJS-menu-demo",
   "main": "index.html",
   "window": {
     "show": false,
     "position": "center",
     "width": 500,
     "height": 500
+  },
+  "scripts": {
+    "start": "nw ."
   }
 }

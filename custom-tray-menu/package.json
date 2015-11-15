@@ -11,7 +11,5 @@
   },
   "scripts": {
     "start": "nw ."
-  },
-  "dependencies": {
   }
 }
