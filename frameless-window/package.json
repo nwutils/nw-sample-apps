@@ -1,8 +1,11 @@
 {
-  "name": "Frameless Window",
+  "name": "FramelessWindow",
   "description": "Chrome platform app.",
-  "version": "0.1",
+  "version": "0.0.1",
   "main": "frameless_window.html",
+  "scripts": {
+    "start": "nodewebkit"
+  },
   "window": {
     "show": false,
     "toolbar": false,

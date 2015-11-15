@@ -1,6 +1,9 @@
 {
-  "name": "node-webkit menu demo",
+  "name": "node-webkit-menu-demo",
   "main": "index.html",
+  "scripts": {
+    "start": "nodewebkit"
+  },
   "window": {
     "show": false,
     "position": "center",

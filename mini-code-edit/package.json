@@ -3,6 +3,9 @@
   "version": "0.1.11",
   "description": "A very small code editor.",
   "main": "main.html",
+   "scripts": {
+    "start": "nodewebkit"
+  }, 
   "window": {
     "width": 400,
     "height": 520,

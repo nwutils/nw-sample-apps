@@ -1,6 +1,9 @@
 {
   "name": "mp3-encoder",
   "main": "index.html",
+  "scripts": {
+    "start": "nodewebkit"
+  },
   "window": {
     "toolbar": false,
     "resizable": false,
