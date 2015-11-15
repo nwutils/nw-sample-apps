@@ -9,3 +9,12 @@ Please visit [nw.js group](http://groups.google.com/group/nwjs-general) for disc
 ## How to run apps
 
 https://github.com/nwjs/nw.js/wiki/How-to-run-apps
+
+Easy way
+
+```sh
+npm install -g nw
+git clone https://github.com/zcbenz/nw-sample-apps.git
+cd nw-sample-apps/file-explorer
+npm start # or "nw ."
+```
