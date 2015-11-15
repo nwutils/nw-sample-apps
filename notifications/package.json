@@ -9,6 +9,7 @@
     "width": 550,
     "height": 470
   },
+  "repository": "https://github.com/zcbenz/nw-sample-apps",
   "scripts": {
     "start": "nw ."
   },
