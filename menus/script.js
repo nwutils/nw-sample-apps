@@ -8,7 +8,9 @@ if (process.platform == "darwin") {
 }
 
 gui.Window.get().show();
-
+/**
+ * Create context menus (right click) on DOM elements
+ */
 var menu1 = new gui.Menu();
 var submenu = new gui.Menu();
 submenu.append(new gui.MenuItem({ type: 'checkbox', label: 'box1' }));
