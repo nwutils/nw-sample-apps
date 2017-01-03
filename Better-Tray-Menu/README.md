@@ -6,7 +6,7 @@ Starts the application silently (in the tray). The main window can be opened by 
 ## Running
 ```
 git clone https://github.com/jpl42/Better-Tray-Menu.git
-nw Better-Tray-Menu/
+nw nw-sample-apps/Better-Tray-Menu/
 ```
 
 ## Disable Frameless Window
