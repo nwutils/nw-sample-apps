@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	var gui = require('nw.gui');
+	var tray = new gui.Tray({ title: 'Tray', tooltip: 'Tray Menu', icon: 'tray.png' });
+	var menu = new gui.Menu();
+	menu.append(new gui.MenuItem({ type: 'normal', label: 'Open Application', click: function() { window.open('main/index.html', '_blank'); }}));
+	menu.append(new gui.MenuItem({ type: 'separator' }));
+	menu.append(new gui.MenuItem({ type: 'normal', label: 'Exit', click: function() { gui.App.quit(); } }));
+	tray.menu = menu;
+	tray.on('click', function() { window.open('main/index.html', '_blank'); });
+	</script>
+</head>
+</html>
