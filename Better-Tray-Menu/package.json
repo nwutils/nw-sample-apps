@@ -1,0 +1,12 @@
+{
+  "name": "Better-Tray-Menu",
+  "main": "start.html",
+  "window": {
+    "show": false,
+    "frame": false,
+    "toolbar": false
+  },
+  "webkit": {
+    "plugin": true
+  }
+}
