@@ -8,8 +8,5 @@
     "icon": "app.icns",
     "width": 550,
     "height": 348
-  },
-  "scripts": {
-    "start": "nw ."
   }
 }

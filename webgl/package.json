@@ -9,8 +9,5 @@
     "toolbar": false,
     "position": "center",
     "resizable": false
-  },
-  "scripts": {
-    "start": "nw ."
   }
 }

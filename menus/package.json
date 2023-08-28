@@ -6,8 +6,5 @@
     "position": "center",
     "width": 500,
     "height": 500
-  },
-  "scripts": {
-    "start": "nw ."
   }
 }

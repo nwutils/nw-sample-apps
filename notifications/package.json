@@ -9,10 +9,6 @@
     "width": 550,
     "height": 470
   },
-  "repository": "https://github.com/zcbenz/nw-sample-apps",
-  "scripts": {
-    "start": "nw ."
-  },
   "dependencies": {
     "node-notifier": "^4.2.1",
     "nw-notify": "0.2.0"

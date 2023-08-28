@@ -12,8 +12,5 @@
     "height": 300,
     "min_width": 220,
     "min_height": 220
-  },
-  "scripts": {
-    "start": "nw ."
   }
 }

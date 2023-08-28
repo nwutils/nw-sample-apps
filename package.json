@@ -1,0 +1,10 @@
+{
+    "name": "nw-sample-apps",
+    "private": true,
+    "devDependencies": {
+        "nw": "^0.79.1-sdk"
+    },
+    "scripts": {
+        "start": "nw"
+    }
+}

@@ -9,8 +9,5 @@
     "show": false,
     "title": "Mini Code Editor",
     "toolbar": false
-  },
-  "scripts": {
-    "start": "nw ."
   }
 }
